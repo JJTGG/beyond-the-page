@@ -337,6 +337,20 @@ main {
   line-height: 1.7;
 }
 
+.chapter-intro-note {
+  max-width: 680px;
+  margin: 0 0 34px;
+  padding: 18px 22px;
+  background: var(--background);
+  border-left: 3px solid var(--accent);
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.chapter-intro-note p {
+  margin: 0;
+}
+
 /* Story cards */
 
 .story-grid {
