@@ -37,11 +37,17 @@ export default function PageShell() {
   };
 
   return (
-    <main>
-      <header>
-        <button type="button" onClick={() => setMenuOpen(true)}>
+    <main className="book-shell">
+      <header className="book-header">
+        <button
+          className="header-button"
+          type="button"
+          onClick={() => setMenuOpen(true)}
+        >
           Contents
         </button>
+
+        <span className="site-mark">Beyond the Page</span>
 
         <ThemeToggle />
       </header>
@@ -55,26 +61,51 @@ export default function PageShell() {
         />
       )}
 
-      <p>
-        {currentChapter === 0
-          ? "Home"
-          : `Chapter ${currentChapter} of ${chapters.length - 1}`}
-      </p>
+      <section className="book-page">
+        <div className="chapter-meta">
+          <span>
+            {currentChapter === 0
+              ? "Home"
+              : `Chapter ${currentChapter} of ${chapters.length - 1}`}
+          </span>
+        </div>
 
-      <h1>{chapters[currentChapter]}</h1>
+        <div className="chapter-content">
+          <p className="eyebrow">My Youth Power in Action Journey</p>
 
-      <div>
-        <button onClick={goPrevious} disabled={currentChapter === 0}>
-          Previous
-        </button>
+          <h1>{chapters[currentChapter]}</h1>
 
-        <button
-          onClick={goNext}
-          disabled={currentChapter === chapters.length - 1}
-        >
-          Next
-        </button>
-      </div>
+          <div className="page-divider" />
+
+          <p className="page-placeholder">
+            This chapter is waiting to be written.
+          </p>
+        </div>
+
+        <div className="page-navigation">
+          <button
+            className="nav-button"
+            type="button"
+            onClick={goPrevious}
+            disabled={currentChapter === 0}
+          >
+            ← Previous
+          </button>
+
+          <span className="page-number">
+            {String(currentChapter + 1).padStart(2, "0")}
+          </span>
+
+          <button
+            className="nav-button"
+            type="button"
+            onClick={goNext}
+            disabled={currentChapter === chapters.length - 1}
+          >
+            Next →
+          </button>
+        </div>
+      </section>
     </main>
   );
 }
