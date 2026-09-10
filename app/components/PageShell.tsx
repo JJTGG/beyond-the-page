@@ -6,6 +6,7 @@ import ThemeToggle from "./ThemeToggle";
 import Home from "../chapters/Home";
 import TheBeginning from "../chapters/TheBeginning";
 import SixWeeks from "../chapters/SixWeeks";
+import TheRipple from "../chapters/TheRipple";
 
 const chapters = [
   "Home",
@@ -24,7 +25,7 @@ const chapterComponents = [
   Home,
   TheBeginning,
   SixWeeks,
-  null,
+  TheRipple,
   null,
   null,
   null,
