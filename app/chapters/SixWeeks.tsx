@@ -11,6 +11,13 @@ export default function SixWeeks() {
         A chapter of learning, reflection and growth.
       </p>
 
+      <div className="chapter-intro-note">
+        <p>
+          Six weeks of questions, conversations, reflections and small
+          steps toward finding my own voice in literacy advocacy.
+        </p>
+      </div>
+
       <SixWeeksContent />
     </section>
   );
