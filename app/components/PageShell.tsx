@@ -9,6 +9,7 @@ import SixWeeks from "../chapters/SixWeeks";
 import TheRipple from "../chapters/TheRipple";
 import LiteracyActions from "../chapters/LiteracyActions";
 import TheGallery from "../chapters/TheGallery";
+import BehindThePages from "../chapters/BehindThePages";
 
 const chapters = [
   "Home",
@@ -30,7 +31,7 @@ const chapterComponents = [
   TheRipple,
   LiteracyActions,
   TheGallery,
-  null,
+  BehindThePages,
   null,
   null,
   null,
