@@ -2,6 +2,18 @@
   --background: #faf6ef;
   --foreground: #2b2620;
   --accent: #c1592b;
+  --paper: #fffdf8;
+  --muted: #756c62;
+  --border: rgba(43, 38, 32, 0.14);
+}
+
+html[data-theme="dark"] {
+  --background: #211d18;
+  --foreground: #ede7dc;
+  --accent: #e07a4a;
+  --paper: #2a251f;
+  --muted: #b8aea2;
+  --border: rgba(237, 231, 220, 0.14);
 }
 
 * {
@@ -22,6 +34,10 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
 }
 
 button,
@@ -43,4 +59,14 @@ a {
 img {
   max-width: 100%;
   display: block;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-fraunces), serif;
+}
+
+main {
+  min-height: 100vh;
 }
