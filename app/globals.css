@@ -315,6 +315,143 @@ main {
   color: var(--accent);
 }
 
+/* Story chapters */
+
+.story-chapter {
+  width: 100%;
+}
+
+.story-chapter > h1 {
+  margin: 0;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  line-height: 0.98;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.chapter-subtitle {
+  max-width: 620px;
+  margin: 18px 0 42px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Six Weeks */
+
+.six-weeks {
+  display: grid;
+  gap: 14px;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.week-card {
+  border: 1px solid var(--border);
+  background: var(--background);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.week-card.open {
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.week-card-trigger {
+  width: 100%;
+  min-height: 68px;
+  padding: 18px 20px;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+}
+
+.week-card-trigger:hover {
+  color: var(--accent);
+}
+
+.week-card-title {
+  font-family: var(--font-fraunces), serif;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.week-card-icon {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--accent);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.week-card-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 260ms ease;
+}
+
+.week-card.open .week-card-content {
+  grid-template-rows: 1fr;
+}
+
+.week-card-inner {
+  min-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.week-card.open .week-card-inner {
+  padding-bottom: 28px;
+}
+
+.week-section {
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.week-section + .week-section {
+  margin-top: 24px;
+}
+
+.week-section h3 {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 1.35rem;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.week-section p {
+  margin: 0 0 14px;
+  color: var(--foreground);
+  line-height: 1.75;
+}
+
+.week-section p:last-child {
+  margin-bottom: 0;
+}
+
+.week-section-items {
+  display: grid;
+  gap: 14px;
+}
+
+.week-section-items p {
+  margin: 0;
+}
+
 /* Mobile */
 
 @media (max-width: 640px) {
@@ -355,4 +492,25 @@ main {
   .chapter-menu-inner {
     padding: 28px 22px;
   }
+
+  .story-chapter > h1 {
+    font-size: clamp(2.6rem, 14vw, 4.2rem);
+  }
+
+  .chapter-subtitle {
+    margin-bottom: 30px;
+  }
+
+  .week-card-trigger {
+    padding: 16px;
+  }
+
+  .week-card-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
+
+Commit message:
+
+"style: add story and accordion styling"
