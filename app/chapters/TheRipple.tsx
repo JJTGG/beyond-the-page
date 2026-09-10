@@ -18,7 +18,7 @@ export default function TheRipple() {
           </p>
 
           <p>
-            [Nabira&apos;s story will be added here.]
+            [Nabira&apos;s story will be added here later.]
           </p>
         </article>
 
@@ -30,7 +30,7 @@ export default function TheRipple() {
           </p>
 
           <p>
-            [Sofiyah&apos;s motivation will be added here.]
+            [Empty for now.]
           </p>
         </article>
 
@@ -43,7 +43,7 @@ export default function TheRipple() {
           </p>
 
           <div className="chapter-intro-note">
-            <p>[Fundraising timeline will be added here.]</p>
+            <p>[Fundraising timeline will be added here later.]</p>
           </div>
         </article>
 
@@ -56,7 +56,7 @@ export default function TheRipple() {
           </p>
 
           <p>
-            [Ripple effect stories and responses will be added here.]
+            [Ripple effect stories and responses will be added here later.]
           </p>
         </article>
 
@@ -68,7 +68,7 @@ export default function TheRipple() {
           </p>
 
           <div className="chapter-intro-note">
-            <p>[Interactive fundraising progress tracker will be added here.]</p>
+            <p>[Interactive fundraising progress tracker will be added here later.]</p>
           </div>
         </article>
 
@@ -81,7 +81,7 @@ export default function TheRipple() {
           </p>
 
           <p>
-            [Sofiyah&apos;s reflection will be added here.]
+            [Empty for now.]
           </p>
         </article>
       </div>
