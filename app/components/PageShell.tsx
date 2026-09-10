@@ -3,6 +3,9 @@
 import { useState } from "react";
 import ChapterMenu from "./ChapterMenu";
 import ThemeToggle from "./ThemeToggle";
+import Home from "../chapters/Home";
+import TheBeginning from "../chapters/TheBeginning";
+import SixWeeks from "../chapters/SixWeeks";
 
 const chapters = [
   "Home",
@@ -15,6 +18,19 @@ const chapters = [
   "The Numbers",
   "The Reflection",
   "Beyond YAP",
+];
+
+const chapterComponents = [
+  Home,
+  TheBeginning,
+  SixWeeks,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
 ];
 
 export default function PageShell() {
@@ -35,6 +51,8 @@ export default function PageShell() {
     setCurrentChapter(index);
     setMenuOpen(false);
   };
+
+  const Chapter = chapterComponents[currentChapter];
 
   return (
     <main className="book-shell">
@@ -71,15 +89,21 @@ export default function PageShell() {
         </div>
 
         <div className="chapter-content">
-          <p className="eyebrow">My Youth Power in Action Journey</p>
+          {Chapter ? (
+            <Chapter />
+          ) : (
+            <>
+              <p className="eyebrow">My Youth Power in Action Journey</p>
 
-          <h1>{chapters[currentChapter]}</h1>
+              <h1>{chapters[currentChapter]}</h1>
 
-          <div className="page-divider" />
+              <div className="page-divider" />
 
-          <p className="page-placeholder">
-            This chapter is waiting to be written.
-          </p>
+              <p className="page-placeholder">
+                This chapter is waiting to be written.
+              </p>
+            </>
+          )}
         </div>
 
         <div className="page-navigation">
