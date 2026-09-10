@@ -15,6 +15,10 @@ export default function WeekCard({
   isOpen,
   onToggle,
 }: WeekCardProps) {
+  const contentId = `week-content-${title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")}`;
+
   return (
     <article className={`week-card ${isOpen ? "open" : ""}`}>
       <button
@@ -22,6 +26,7 @@ export default function WeekCard({
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
+        aria-controls={contentId}
       >
         <span className="week-card-title">{title}</span>
 
@@ -30,20 +35,28 @@ export default function WeekCard({
         </span>
       </button>
 
-      <div className="week-card-content">
+      <div
+        id={contentId}
+        className="week-card-content"
+        aria-hidden={!isOpen}
+      >
         <div className="week-card-inner">
           {sections.map((section) => (
             <section className="week-section" key={section.heading}>
               <h3>{section.heading}</h3>
 
-              {section.paragraphs?.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+              {section.paragraphs?.map((paragraph, index) => (
+                <p key={`${section.heading}-paragraph-${index}`}>
+                  {paragraph}
+                </p>
               ))}
 
               {section.items && (
                 <div className="week-section-items">
-                  {section.items.map((item) => (
-                    <p key={item}>{item}</p>
+                  {section.items.map((item, index) => (
+                    <p key={`${section.heading}-item-${index}`}>
+                      {item}
+                    </p>
                   ))}
                 </div>
               )}
