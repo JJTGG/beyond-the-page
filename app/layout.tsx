@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { fraunces, inter } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Beyond the Page",
@@ -13,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${fraunces.variable} ${inter.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
