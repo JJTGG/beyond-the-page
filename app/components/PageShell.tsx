@@ -8,6 +8,7 @@ import TheBeginning from "../chapters/TheBeginning";
 import SixWeeks from "../chapters/SixWeeks";
 import TheRipple from "../chapters/TheRipple";
 import LiteracyActions from "../chapters/LiteracyActions";
+import TheGallery from "../chapters/TheGallery";
 
 const chapters = [
   "Home",
@@ -28,7 +29,7 @@ const chapterComponents = [
   SixWeeks,
   TheRipple,
   LiteracyActions,
-  null,
+  TheGallery,
   null,
   null,
   null,
