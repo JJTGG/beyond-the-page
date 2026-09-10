@@ -8,14 +8,14 @@ const facts = [
     label: "Reading Fact",
     title: "My Reading Fact",
     content:
-      "[A personal reading fact or discovery from Sofiyah's journey.]",
+      "[A personal reading fact or discovery from my journey.]",
   },
   {
     id: "classroom",
     label: "Classroom Fact",
     title: "My Classroom Fact",
     content:
-      "[Something surprising Sofiyah discovered while teaching.]",
+      "[Something surprising I discovered while teaching.]",
   },
   {
     id: "books",
@@ -34,7 +34,7 @@ const facts = [
   {
     id: "random",
     label: "Random Thought",
-    title: "Sofiyah's Random Thought",
+    title: "My Random Thought",
     content:
       "[A funny, unexpected, or personal observation from the journey.]",
   },
