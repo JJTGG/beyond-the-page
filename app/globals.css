@@ -337,6 +337,78 @@ main {
   line-height: 1.7;
 }
 
+/* Story cards */
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.story-card {
+  padding: 28px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.story-card:nth-child(2) {
+  transform: rotate(0.5deg);
+}
+
+.story-card:nth-child(3) {
+  transform: rotate(-0.7deg);
+}
+
+.story-card:nth-child(4) {
+  transform: rotate(0.4deg);
+}
+
+.story-card:nth-child(5) {
+  transform: rotate(-0.5deg);
+}
+
+.story-card h2 {
+  margin: 0 0 16px;
+  color: var(--foreground);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.05;
+  font-weight: 500;
+}
+
+.story-card p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.story-card p:last-child {
+  margin-bottom: 0;
+}
+
+.story-card-highlight {
+  background: var(--accent);
+  color: #fffaf4;
+  border-color: transparent;
+}
+
+.story-card-highlight h2,
+.story-card-highlight p {
+  color: #fffaf4;
+}
+
+.story-card-highlight::before {
+  content: "A moment that changed the way I saw things";
+  display: block;
+  margin-bottom: 18px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
 /* Six Weeks */
 
 .six-weeks {
@@ -509,8 +581,18 @@ main {
     padding-left: 16px;
     padding-right: 16px;
   }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .story-card,
+  .story-card:nth-child(2),
+  .story-card:nth-child(3),
+  .story-card:nth-child(4),
+  .story-card:nth-child(5) {
+    transform: none;
+    padding: 22px;
+  }
 }
-
-Commit message:
-
-"style: add story and accordion styling"
