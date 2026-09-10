@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import ChapterMenu from "./ChapterMenu";
+import ThemeToggle from "./ThemeToggle";
 
 const chapters = [
   "Home",
@@ -17,6 +19,7 @@ const chapters = [
 
 export default function PageShell() {
   const [currentChapter, setCurrentChapter] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const goNext = () => {
     setCurrentChapter((current) =>
@@ -28,8 +31,30 @@ export default function PageShell() {
     setCurrentChapter((current) => Math.max(current - 1, 0));
   };
 
+  const selectChapter = (index: number) => {
+    setCurrentChapter(index);
+    setMenuOpen(false);
+  };
+
   return (
     <main>
+      <header>
+        <button type="button" onClick={() => setMenuOpen(true)}>
+          Contents
+        </button>
+
+        <ThemeToggle />
+      </header>
+
+      {menuOpen && (
+        <ChapterMenu
+          chapters={chapters}
+          currentChapter={currentChapter}
+          onSelect={selectChapter}
+          onClose={() => setMenuOpen(false)}
+        />
+      )}
+
       <p>
         {currentChapter === 0
           ? "Home"
