@@ -165,7 +165,8 @@ main {
 }
 
 .chapter-content {
-  max-width: 760px;
+  width: 100%;
+  max-width: 920px;
   margin: auto 0;
 }
 
