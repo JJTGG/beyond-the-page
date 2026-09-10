@@ -10,6 +10,7 @@ import TheRipple from "../chapters/TheRipple";
 import LiteracyActions from "../chapters/LiteracyActions";
 import TheGallery from "../chapters/TheGallery";
 import BehindThePages from "../chapters/BehindThePages";
+import TheNumbers from "../chapters/TheNumbers";
 
 const chapters = [
   "Home",
@@ -32,7 +33,7 @@ const chapterComponents = [
   LiteracyActions,
   TheGallery,
   BehindThePages,
-  null,
+  TheNumbers,
   null,
   null,
 ];
