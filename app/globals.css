@@ -611,3 +611,233 @@ main {
     padding: 22px;
   }
 }
+
+/* Gallery */
+
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 28px;
+}
+
+.gallery-filter {
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.82rem;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.gallery-filter:hover,
+.gallery-filter.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--background);
+}
+
+.gallery-filter:active {
+  transform: scale(0.97);
+}
+
+.gallery-grid {
+  columns: 3 220px;
+  column-gap: 16px;
+}
+
+.gallery-item {
+  width: 100%;
+  display: block;
+  margin: 0 0 16px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  text-align: left;
+  break-inside: avoid;
+}
+
+.gallery-image-placeholder {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  background: var(--background);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.gallery-item:nth-child(2n) .gallery-image-placeholder {
+  min-height: 280px;
+}
+
+.gallery-item:nth-child(3n) .gallery-image-placeholder {
+  min-height: 190px;
+}
+
+.gallery-item:hover .gallery-image-placeholder {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px var(--shadow);
+}
+
+.gallery-item-info {
+  display: grid;
+  gap: 5px;
+  padding: 10px 4px 0;
+}
+
+.gallery-item-category {
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.gallery-item-title {
+  font-family: var(--font-fraunces), serif;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.gallery-empty {
+  padding: 48px 20px;
+  border: 1px dashed var(--border);
+  color: var(--muted);
+  text-align: center;
+}
+
+.gallery-empty p {
+  margin: 0;
+}
+
+/* Gallery lightbox */
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(43, 38, 32, 0.68);
+  backdrop-filter: blur(8px);
+}
+
+.gallery-lightbox-inner {
+  position: relative;
+  width: min(1000px, 100%);
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  padding: clamp(24px, 4vw, 44px);
+  background: var(--paper);
+  border: 1px solid var(--border);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+}
+
+.gallery-lightbox-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--foreground);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.gallery-lightbox-close:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.gallery-lightbox-media {
+  width: 100%;
+}
+
+.gallery-image-large {
+  min-height: min(65vh, 620px);
+}
+
+.gallery-note {
+  width: min(460px, 90%);
+  margin: -30px 0 0 auto;
+  position: relative;
+  padding: 24px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 28px var(--shadow);
+  transform: rotate(1deg);
+}
+
+.gallery-note-label {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.gallery-note p:last-child {
+  margin: 0;
+  color: var(--foreground);
+  line-height: 1.7;
+}
+
+/* Gallery mobile */
+
+@media (max-width: 640px) {
+  .gallery-filters {
+    gap: 6px;
+  }
+
+  .gallery-filter {
+    padding: 7px 11px;
+    font-size: 0.76rem;
+  }
+
+  .gallery-grid {
+    columns: 2 140px;
+    column-gap: 10px;
+  }
+
+  .gallery-item {
+    margin-bottom: 10px;
+  }
+
+  .gallery-image-placeholder,
+  .gallery-item:nth-child(2n) .gallery-image-placeholder,
+  .gallery-item:nth-child(3n) .gallery-image-placeholder {
+    min-height: 170px;
+  }
+
+  .gallery-lightbox {
+    padding: 12px;
+  }
+
+  .gallery-lightbox-inner {
+    max-height: calc(100vh - 24px);
+    padding: 18px;
+  }
+
+  .gallery-note {
+    width: 92%;
+    margin: -18px auto 0;
+  }
+}
