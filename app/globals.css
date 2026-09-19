@@ -1181,3 +1181,122 @@ main {
     font-size: 3.2rem;
   }
 }
+
+  /* =========================
+   The Reflection
+   ========================= */
+
+.reflection-section {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.reflection-intro {
+  max-width: 680px;
+}
+
+.reflection-grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.reflection-card {
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.reflection-card button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 1.35rem;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.reflection-card button:hover {
+  color: var(--accent);
+}
+
+.reflection-card-icon {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-size: 1.25rem;
+  transition: transform 180ms ease;
+}
+
+.reflection-card.open .reflection-card-icon {
+  transform: rotate(45deg);
+}
+
+.reflection-card-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 260ms ease;
+}
+
+.reflection-card.open .reflection-card-content {
+  grid-template-rows: 1fr;
+}
+
+.reflection-card-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.reflection-card-copy {
+  max-width: 720px;
+  padding: 0 1.35rem 1.5rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.reflection-card-copy p {
+  margin: 0 0 1rem;
+}
+
+.reflection-card-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.reflection-highlight {
+  margin-top: 1.25rem;
+  padding: 1rem 1.15rem;
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 7%, var(--paper));
+  color: var(--foreground);
+  font-family: var(--font-fraunces), serif;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .reflection-section {
+    gap: 2rem;
+  }
+
+  .reflection-card button {
+    padding: 1.1rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .reflection-card-copy {
+    padding: 0 1rem 1.35rem;
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+}
