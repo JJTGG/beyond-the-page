@@ -446,11 +446,20 @@ export default function BeyondYAP() {
 </div>
         </div>
 
-        <div className="final-signature">
-          <p>Sofiyah Bakare</p>
-          <span>[Signature / handwritten name]</span>
-        </div>
-      </div>
+        <div className="final-signature">  
+    <p>Sofiyah Bakare</p>  
+    <span>[Signature / handwritten name]</span>  
+  </div>  
+
+  <div className="builder-credit">
+
+Built by{" "}
+<a href="https://jayjaytgg.vercel.app/" target="_blank" rel="noreferrer">
+<strong>JAYJAYTGG</strong>
+</a>
+
+</div>  
+    </div>
     </section>
   );
 }
