@@ -1,3 +1,5 @@
+import ReactionSection from "@/app/components/ReactionSection";
+
 export default function BeyondYAP() {
   return (
     <section className="story-chapter beyond-yap-chapter">
@@ -435,16 +437,7 @@ export default function BeyondYAP() {
           </div>
         </div>
 
-        <div className="reaction-section">
-          <p className="eyebrow">If This Story Stayed With You...</p>
-
-          <div className="reaction-options">
-            <button type="button">I loved this story.</button>
-            <button type="button">This inspired me.</button>
-            <button type="button">This made me think.</button>
-            <button type="button">I want to know what happens next.</button>
-          </div>
-        </div>
+        <ReactionSection />
 
         <div className="final-signature">
           <p>Sofiyah Bakare</p>
