@@ -12,6 +12,7 @@ import TheGallery from "../chapters/TheGallery";
 import BehindThePages from "../chapters/BehindThePages";
 import TheNumbers from "../chapters/TheNumbers";
 import TheReflection from "../chapters/TheReflection";
+import BeyondYAP from "../chapters/BeyondYAP";
 
 const chapters = [
   "Home",
@@ -36,7 +37,7 @@ const chapterComponents = [
   BehindThePages,
   TheNumbers,
   TheReflection,
-  null,
+  BeyondYAP,
 ];
 
 export default function PageShell() {
