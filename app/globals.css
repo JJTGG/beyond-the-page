@@ -1603,3 +1603,40 @@ main {
     margin-left: 0.75rem;
   }
 }
+
+  /* =========================
+   Literacy Actions
+   ========================= */
+
+.chapter-card-subtitle {
+  margin: -0.35rem 0 1rem;
+  color: var(--accent);
+  font-family: var(--font-fraunces), serif;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.story-card-person {
+  margin: 1.25rem 0 0.35rem;
+  color: var(--foreground);
+  font-family: var(--font-fraunces), serif;
+  font-size: 1.25rem;
+}
+
+.story-card-person-note {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .chapter-card-subtitle {
+    font-size: 1rem;
+  }
+
+  .story-card-person {
+    font-size: 1.15rem;
+  }
+    }
