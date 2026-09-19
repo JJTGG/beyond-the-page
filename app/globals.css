@@ -1640,3 +1640,64 @@ main {
     font-size: 1.15rem;
   }
     }
+
+
+  /* =========================
+   Mobile spacing polish
+   ========================= */
+
+@media (max-width: 600px) {
+  .book-page {
+    padding: 24px 18px;
+  }
+
+  .chapter-content {
+    width: 100%;
+  }
+
+  .chapter-subtitle {
+    margin-top: 14px;
+    margin-bottom: 26px;
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .chapter-intro-note {
+    margin-bottom: 26px;
+    padding: 15px 17px;
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .story-card p,
+  .week-section p,
+  .reflection-card-copy,
+  .beyond-yap-feature > p,
+  .beyond-yap-dream p,
+  .beyond-yap-person p {
+    line-height: 1.7;
+  }
+
+  .story-card h2 {
+    margin-bottom: 13px;
+  }
+
+  .page-navigation {
+    gap: 10px;
+    margin-top: 28px;
+  }
+
+  .page-number {
+    font-size: 0.82rem;
+  }
+
+  .header-button {
+    padding: 8px 12px;
+    font-size: 0.82rem;
+  }
+
+  .theme-toggle {
+    width: 38px;
+    height: 38px;
+  }
+}
