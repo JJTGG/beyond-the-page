@@ -450,17 +450,6 @@ export default function BeyondYAP() {
           <p>Sofiyah Bakare</p>
           <span>[Signature / handwritten name]</span>
         </div>
-
-        <div className="builder-credit">
-          Built by{" "}
-          <a
-            href="https://jayjaytgg.vercel.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <strong>JAYJAYTGG</strong>
-          </a>
-        </div>
       </div>
     </section>
   );
