@@ -43,19 +43,42 @@ const chapterComponents = [
 export default function PageShell() {
   const [currentChapter, setCurrentChapter] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [direction, setDirection] = useState<"next" | "previous">("next");
+  const [isTurning, setIsTurning] = useState(false);
+
+  const changeChapter = (nextChapter: number, nextDirection: "next" | "previous") => {
+    if (nextChapter === currentChapter || isTurning) {
+      return;
+    }
+
+    setDirection(nextDirection);
+    setIsTurning(true);
+
+    window.setTimeout(() => {
+      setCurrentChapter(nextChapter);
+      setIsTurning(false);
+    }, 260);
+  };
 
   const goNext = () => {
-    setCurrentChapter((current) =>
-      Math.min(current + 1, chapters.length - 1),
-    );
+    if (currentChapter < chapters.length - 1) {
+      changeChapter(currentChapter + 1, "next");
+    }
   };
 
   const goPrevious = () => {
-    setCurrentChapter((current) => Math.max(current - 1, 0));
+    if (currentChapter > 0) {
+      changeChapter(currentChapter - 1, "previous");
+    }
   };
 
   const selectChapter = (index: number) => {
-    setCurrentChapter(index);
+    if (index === currentChapter) {
+      setMenuOpen(false);
+      return;
+    }
+
+    changeChapter(index, index > currentChapter ? "next" : "previous");
     setMenuOpen(false);
   };
 
@@ -95,7 +118,11 @@ export default function PageShell() {
           </span>
         </div>
 
-        <div className="chapter-content">
+        <div
+          className={`chapter-content page-turn page-turn-${direction}${
+            isTurning ? " page-turning" : ""
+          }`}
+        >
           {Chapter ? (
             <Chapter />
           ) : (
@@ -118,7 +145,7 @@ export default function PageShell() {
             className="nav-button"
             type="button"
             onClick={goPrevious}
-            disabled={currentChapter === 0}
+            disabled={currentChapter === 0 || isTurning}
           >
             ← Previous
           </button>
@@ -131,7 +158,7 @@ export default function PageShell() {
             className="nav-button"
             type="button"
             onClick={goNext}
-            disabled={currentChapter === chapters.length - 1}
+            disabled={currentChapter === chapters.length - 1 || isTurning}
           >
             Next →
           </button>
