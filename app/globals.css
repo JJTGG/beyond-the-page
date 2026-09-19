@@ -1749,3 +1749,61 @@ main {
     animation-duration: 1ms;
   }
 }
+
+
+  /* =========================
+   Whole-site consistency
+   ========================= */
+
+.story-card,
+.fact-card-front,
+.fact-card-back,
+.number-card,
+.reflection-card,
+.beyond-yap-feature,
+.beyond-yap-person {
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.story-card:hover,
+.number-card:hover,
+.beyond-yap-feature:hover,
+.beyond-yap-person:hover {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+}
+
+.story-card h2,
+.fact-card-front strong,
+.number-value,
+.beyond-yap-feature h3 {
+  text-wrap: balance;
+}
+
+.story-card p,
+.week-section p,
+.reflection-card-copy,
+.beyond-yap-feature > p,
+.beyond-yap-dream p,
+.beyond-yap-person p {
+  text-wrap: pretty;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .story-card,
+  .fact-card-front,
+  .fact-card-back,
+  .number-card,
+  .reflection-card,
+  .beyond-yap-feature,
+  .beyond-yap-person {
+    box-shadow: 0 6px 18px var(--shadow);
+  }
+}
