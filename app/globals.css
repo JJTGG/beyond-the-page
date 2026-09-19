@@ -841,3 +841,254 @@ main {
     margin: -18px auto 0;
   }
 }
+
+   /* Behind the Pages — Flip Cards */
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.fact-card {
+  position: relative;
+  min-height: 260px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  text-align: left;
+  perspective: 1000px;
+}
+
+.fact-card-inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  transform-style: preserve-3d;
+  transition: transform 500ms ease;
+}
+
+.fact-card.flipped .fact-card-inner {
+  transform: rotateY(180deg);
+}
+
+.fact-card-front,
+.fact-card-back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border: 1px solid var(--border);
+  background: var(--background);
+  box-shadow: 0 8px 24px var(--shadow);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.fact-card-front {
+  justify-content: space-between;
+}
+
+.fact-card-back {
+  justify-content: flex-start;
+  gap: 16px;
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+.fact-card:nth-child(2) {
+  transform: rotate(0.6deg);
+}
+
+.fact-card:nth-child(3) {
+  transform: rotate(-0.7deg);
+}
+
+.fact-card:nth-child(4) {
+  transform: rotate(0.5deg);
+}
+
+.fact-card:nth-child(5) {
+  transform: rotate(-0.4deg);
+}
+
+.fact-card:hover .fact-card-front,
+.fact-card:hover .fact-card-back {
+  border-color: var(--accent);
+}
+
+.fact-card-label {
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.fact-card-front strong {
+  max-width: 320px;
+  font-family: var(--font-fraunces), serif;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.fact-card-back > span:nth-child(2) {
+  color: var(--foreground);
+  line-height: 1.75;
+}
+
+.fact-card-hint {
+  margin-top: auto;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.fact-card-back .fact-card-hint {
+  padding-top: 8px;
+}
+
+/* Did You Know */
+
+.did-you-know {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.did-you-know-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 500;
+}
+
+.did-you-know-card {
+  position: relative;
+  margin-top: 24px;
+  padding: 32px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.did-you-know-icon {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 2rem;
+}
+
+.did-you-know-count {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+.did-you-know-card h3 {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.did-you-know-card p {
+  max-width: 680px;
+  margin: 0;
+  line-height: 1.75;
+}
+
+.did-you-know-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 18px;
+}
+
+.did-you-know-controls button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--foreground);
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.did-you-know-controls button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--background);
+}
+
+.did-you-know-controls button:active {
+  transform: scale(0.95);
+}
+
+.did-you-know-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.did-you-know-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.did-you-know-dots span.active {
+  background: var(--accent);
+  transform: scale(1.35);
+}
+
+/* Mobile flip cards */
+
+@media (max-width: 640px) {
+  .facts-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .fact-card,
+  .fact-card-inner {
+    min-height: 240px;
+  }
+
+  .fact-card:nth-child(2),
+  .fact-card:nth-child(3),
+  .fact-card:nth-child(4),
+  .fact-card:nth-child(5) {
+    transform: none;
+  }
+
+  .fact-card-front,
+  .fact-card-back {
+    padding: 22px;
+  }
+
+  .did-you-know {
+    margin-top: 42px;
+    padding-top: 32px;
+  }
+
+  .did-you-know-card {
+    padding: 24px;
+  }
+}
