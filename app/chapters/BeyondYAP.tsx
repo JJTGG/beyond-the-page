@@ -439,11 +439,11 @@ export default function BeyondYAP() {
           <p className="eyebrow">If This Story Stayed With You...</p>
 
           <div className="reaction-options">
-            <button type="button">📖 I loved this story.</button>
-            <button type="button">🌱 This inspired me.</button>
-            <button type="button">💭 This made me think.</button>
-            <button type="button">🌈 I want to know what happens next.</button>
-          </div>
+  <button type="button">I loved this story.</button>
+  <button type="button">This inspired me.</button>
+  <button type="button">This made me think.</button>
+  <button type="button">I want to know what happens next.</button>
+</div>
         </div>
 
         <div className="final-signature">
