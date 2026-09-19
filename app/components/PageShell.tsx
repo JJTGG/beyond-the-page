@@ -11,6 +11,7 @@ import LiteracyActions from "../chapters/LiteracyActions";
 import TheGallery from "../chapters/TheGallery";
 import BehindThePages from "../chapters/BehindThePages";
 import TheNumbers from "../chapters/TheNumbers";
+import TheReflection from "../chapters/TheReflection";
 
 const chapters = [
   "Home",
@@ -34,7 +35,7 @@ const chapterComponents = [
   TheGallery,
   BehindThePages,
   TheNumbers,
-  null,
+  TheReflection,
   null,
 ];
 
