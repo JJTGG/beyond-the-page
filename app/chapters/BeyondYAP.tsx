@@ -201,17 +201,13 @@ export default function BeyondYAP() {
         <p>But I do believe that one person can start something.</p>
 
         <div className="ripple-lines">
-          <p>
-            A teacher can make a class feel different.
-          </p>
+          <p>A teacher can make a class feel different.</p>
 
           <p>
             A book can introduce a child to a world they've never seen.
           </p>
 
-          <p>
-            A conversation can make someone care.
-          </p>
+          <p>A conversation can make someone care.</p>
 
           <p>
             A fundraiser can connect someone to an opportunity.
@@ -289,7 +285,7 @@ export default function BeyondYAP() {
             </p>
 
             <p className="social-placeholder">
-              Instagram: @[LEAVE HANDLE HERE]
+              Instagram: @fayra_5.0
             </p>
           </article>
 
@@ -322,7 +318,7 @@ export default function BeyondYAP() {
             </p>
 
             <p className="social-placeholder">
-              Instagram: @[LEAVE HANDLE HERE]
+              Instagram: @laurzz.halabi
             </p>
           </article>
 
@@ -350,7 +346,7 @@ export default function BeyondYAP() {
             </p>
 
             <p className="social-placeholder">
-              Instagram: @[LEAVE HANDLE HERE]
+              Instagram: @omar_fared22
             </p>
           </article>
 
@@ -430,19 +426,49 @@ export default function BeyondYAP() {
           <p className="eyebrow">Let's Stay Connected</p>
 
           <div className="connection-list">
-            <p>Email: [MY EMAIL ADDRESS]</p>
-            <p>LinkedIn: [MY LINKEDIN]</p>
-            <p>Instagram: [MY INSTAGRAM]</p>
-            <p>Substack: [MY SUBSTACK]</p>
+            <p>
+              Email:{" "}
+              <a href="mailto:sofiyahbakare@gmail.com">
+                sofiyahbakare@gmail.com
+              </a>
+            </p>
+
+            <p>
+              LinkedIn:{" "}
+              <a
+                href="https://www.linkedin.com/in/sofiyah-bakare-107699347"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Sofiyah on LinkedIn
+              </a>
+            </p>
+
+            <p>
+              Instagram:{" "}
+              <a
+                href="https://www.instagram.com/sofiyah_bakare"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @sofiyah_bakare
+              </a>
+            </p>
+
+            <p>
+              Substack:{" "}
+              <a
+                href="https://open.substack.com/pub/reveriesandmemoirsofsofiyah"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Reveries & Memoirs of Sofiyah
+              </a>
+            </p>
           </div>
         </div>
 
         <ReactionSection />
-
-        <div className="final-signature">
-          <p>Sofiyah Bakare</p>
-          <span>[Signature / handwritten name]</span>
-        </div>
       </div>
     </section>
   );
