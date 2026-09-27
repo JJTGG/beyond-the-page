@@ -14,6 +14,20 @@ const filters = [
 
 type Filter = (typeof filters)[number];
 
+const CLOUDINARY_BASE = "https://res.cloudinary.com/kcxmd95c";
+
+function getImageUrl(publicId: string) {
+  return `${CLOUDINARY_BASE}/image/upload/f_auto,q_auto,w_1200/${publicId}`;
+}
+
+function getVideoUrl(publicId: string) {
+  return `${CLOUDINARY_BASE}/video/upload/f_mp4,q_auto:good,w_1280/${publicId}`;
+}
+
+function getVideoPoster(publicId: string) {
+  return `${CLOUDINARY_BASE}/video/upload/so_0,f_jpg,q_auto,w_1200/${publicId}`;
+}
+
 export default function TheGallery() {
   const [activeFilter, setActiveFilter] = useState<Filter>("All");
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -67,19 +81,33 @@ export default function TheGallery() {
               className="gallery-item"
               type="button"
               onClick={() => setSelectedId(item.id)}
+              aria-label={`Open ${item.title}`}
             >
-              <div className="gallery-image-placeholder">
-                <span>Photo</span>
+              <div className="gallery-media">
+                {item.type === "image" ? (
+                  <img
+                    src={getImageUrl(item.publicId)}
+                    alt={item.title}
+                    loading="lazy"
+                  />
+                ) : (
+                  <video
+                    className="gallery-video"
+                    src={getVideoUrl(item.publicId)}
+                    poster={getVideoPoster(item.publicId)}
+                    muted
+                    playsInline
+                    preload="metadata"
+                  />
+                )}
               </div>
 
               <div className="gallery-item-info">
                 <span className="gallery-item-category">
-                  {item.category}
+                  {item.category ?? "Story moment"}
                 </span>
 
-                <span className="gallery-item-title">
-                  {item.title}
-                </span>
+                <span className="gallery-item-title">{item.title}</span>
               </div>
             </button>
           ))}
@@ -106,20 +134,30 @@ export default function TheGallery() {
               className="gallery-lightbox-close"
               type="button"
               onClick={() => setSelectedId(null)}
-              aria-label="Close photo"
+              aria-label="Close media"
             >
               ×
             </button>
 
             <div className="gallery-lightbox-media">
-              <div className="gallery-image-placeholder gallery-image-large">
-                <span>Cloudinary photo</span>
-              </div>
+              {selectedItem.type === "image" ? (
+                <img
+                  src={getImageUrl(selectedItem.publicId)}
+                  alt={selectedItem.title}
+                />
+              ) : (
+                <video
+                  src={getVideoUrl(selectedItem.publicId)}
+                  poster={getVideoPoster(selectedItem.publicId)}
+                  controls
+                  playsInline
+                  preload="metadata"
+                />
+              )}
             </div>
 
             <aside className="gallery-note">
               <p className="gallery-note-label">Sofiyah&apos;s Note</p>
-
               <p>{selectedItem.note}</p>
             </aside>
           </div>
