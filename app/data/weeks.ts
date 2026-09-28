@@ -133,16 +133,6 @@ I believe disagreement does not always have to create conflict. When handled wit
         ],
       },
       {
-        heading: "7-Day Follow-Up",
-        paragraphs: [
-          `What actually happened when I tried to act on my commitment was:
-[Come back after 7 days and complete this section]
-
-What I learned from that is:
-[Come back after 7 days and complete this section]`,
-        ],
-      },
-      {
         heading: "Optional Research Note.",
         paragraphs: [
           `I looked into youth leadership and representation in Nigeria and found organizations working to support young people's involvement in leadership and decision-making.
@@ -404,17 +394,6 @@ Revised sentence:
 
 Reason for the change:
 The original sentence was true, but it was too general and could have been written by anyone. The revised version reflects my own experience more clearly and helps the reader understand exactly how reading influenced my life. It creates a stronger mental picture and makes the story feel more personal, which is what this module encouraged us to do.`,
-        ],
-      },
-      {
-        heading: "Feedback Received",
-        paragraphs: [
-          `(To be completed after sharing my story and receiving feedback from other ambassadors.)
-
-Feedback received:
-What resonated most with people?
-What did I learn from their feedback?
-How might I strengthen my story in the future?`,
         ],
       },
     ],
