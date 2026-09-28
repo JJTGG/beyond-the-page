@@ -17,7 +17,7 @@ export type GalleryItem = {
 export const galleryItems: GalleryItem[] = [
   {
     id: "img-0027",
-    category: null,
+    category: "Books",
     title: "IMG_0027",
     note: "A moment from the journey.",
     publicId: "IMG_0027.heic",
@@ -25,7 +25,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "img-0029",
-    category: null,
+    category: "Teaching",
     title: "IMG_0029",
     note: "A moment from the journey.",
     publicId: "IMG_0029.heic",
@@ -33,7 +33,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "img-0055",
-    category: null,
+    category: "Teaching",
     title: "IMG_0055",
     note: "A moment from the journey.",
     publicId: "IMG_0055.heic",
@@ -41,7 +41,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "img-0065",
-    category: null,
+    category: "Teaching",
     title: "IMG_0065",
     note: "A moment from the journey.",
     publicId: "IMG_0065.heic",
@@ -49,7 +49,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "img-0057",
-    category: null,
+    category: "People",
     title: "IMG_0057",
     note: "A moment from the journey.",
     publicId: "IMG_0057.heic",
@@ -57,7 +57,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "img-0068",
-    category: null,
+    category: "People",
     title: "IMG_0068",
     note: "A moment from the journey.",
     publicId: "IMG_0068.heic",
@@ -65,7 +65,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "img-0069",
-    category: null,
+    category: "Teaching",
     title: "IMG_0069",
     note: "A moment from the journey.",
     publicId: "IMG_0069.heic",
@@ -73,7 +73,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "img-0054",
-    category: null,
+    category: "Teaching",
     title: "IMG_0054",
     note: "A moment from the journey.",
     publicId: "IMG_0054.heic",
@@ -81,7 +81,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "img-0038",
-    category: null,
+    category: "Teaching",
     title: "IMG_0038",
     note: "A moment from the journey.",
     publicId: "IMG_0038.heic",
@@ -89,7 +89,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "img-0043",
-    category: null,
+    category: "Teaching",
     title: "IMG_0043",
     note: "A moment from the journey.",
     publicId: "IMG_0043.heic",
@@ -97,7 +97,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "img-0070",
-    category: null,
+    category: "Teaching",
     title: "IMG_0070",
     note: "A moment from the journey.",
     publicId: "IMG_0070.heic",
@@ -105,7 +105,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "img-0050",
-    category: null,
+    category: "Teaching",
     title: "IMG_0050",
     note: "A moment from the journey.",
     publicId: "IMG_0050.heic",
@@ -113,7 +113,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "img-0066",
-    category: null,
+    category: "Teaching",
     title: "IMG_0066",
     note: "A video moment from the journey.",
     publicId: "InShot_20260927_164602889.mp4",
@@ -121,7 +121,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "img-0067",
-    category: null,
+    category: "Teaching",
     title: "IMG_0067",
     note: "A video moment from the journey.",
     publicId: "IMG_0067.mov",
