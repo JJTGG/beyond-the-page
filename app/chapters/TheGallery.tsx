@@ -101,14 +101,6 @@ export default function TheGallery() {
                   />
                 )}
               </div>
-
-              <div className="gallery-item-info">
-                <span className="gallery-item-category">
-                  {item.category ?? "Story moment"}
-                </span>
-
-                <span className="gallery-item-title">{item.title}</span>
-              </div>
             </button>
           ))}
         </div>
@@ -155,11 +147,6 @@ export default function TheGallery() {
                 />
               )}
             </div>
-
-            <aside className="gallery-note">
-              <p className="gallery-note-label">Sofiyah&apos;s Note</p>
-              <p>{selectedItem.note}</p>
-            </aside>
           </div>
         </div>
       )}
