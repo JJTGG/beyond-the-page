@@ -25,7 +25,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "img-0029",
-    category: "Teaching",
+    category: "People",
     title: "IMG_0029",
     note: "A moment from the journey.",
     publicId: "IMG_0029.heic",
@@ -49,7 +49,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "img-0057",
-    category: "People",
+    category: "Teaching",
     title: "IMG_0057",
     note: "A moment from the journey.",
     publicId: "IMG_0057.heic",
