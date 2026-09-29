@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     "literacy",
     "literacy advocacy",
   ],
+  verification: {
+    google: "OJdnuEykow_C3HX6YgwzUyCKk6EOIIFkvcUXz3Bo19U",
+  },
   openGraph: {
     title: "Beyond the Page — Sofiyah Bakare",
     description:
